@@ -11,6 +11,8 @@ import static org.junit.Assert.*;
  */
 public class StringCalculatorTest {
 
+    StringCalculator c = new StringCalculator();
+
     @Rule
     public ExpectedException exception = ExpectedException.none();
 

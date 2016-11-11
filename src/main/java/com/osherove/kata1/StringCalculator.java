@@ -3,10 +3,8 @@ package com.osherove.kata1;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class StringCalculator {
-
-   private static final Pattern SINGLE_DELIMETER_PATTERN = Pattern.compile("//(.*)\n(.*)");
+    private static final Pattern SINGLE_DELIMETER_PATTERN = Pattern.compile("//(.*)\n(.*)");
     private static final Pattern MULTIPLE_DELIMETER_PATTERN = Pattern.compile("\\[([^\\]]+)\\]");
     private static final String[] EMPTY_STRING_ARRAY = new String[]{"0"};
     private static final String DEFAULT_DELIMITERS = "[,\n]";
