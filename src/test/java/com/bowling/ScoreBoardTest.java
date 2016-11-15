@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by cihan on 11/11/2016.
  */
-public class BowlingTest {
+public class ScoreBoardTest {
 
     private ScoreBoard board = new ScoreBoard();
 
