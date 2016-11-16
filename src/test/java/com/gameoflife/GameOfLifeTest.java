@@ -110,4 +110,13 @@ public class GameOfLifeTest {
         assertTrue(loopCount==2);
     }
 
+    @Test
+    public void When_BoardPrinted_Expect_FollowingOutput(){
+
+        String output = "[0][1][0]\n[0][1][0]\n[0][1][0]";
+        int[][] initialLiveCells = new int[][]{{0,1},{1,1},{2,1}};
+        GameOfLife board = new GameOfLife(3,3,1, initialLiveCells);
+        board.processNextGeneration();
+        assertEquals(output,board.print());
+    }
 }

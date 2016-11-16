@@ -17,6 +17,8 @@ public final class GameOfLife {
     private final Table<Integer,Integer,Cell> board;
     private final int maxGeneration;
     private int currentGeneration;
+    private final int maxRow;
+    private final int maxColumn;
 
     public GameOfLife(int row, int column, int maxGeneration, int[][] initialLiveCells) {
         checkArgument(row>0,"row should be bigger than 0");
@@ -24,6 +26,8 @@ public final class GameOfLife {
         checkArgument(maxGeneration>=0,"maxGeneration should be bigger than 0");
         checkArgument(initialLiveCells.length>0,"initial live cells should not be empty");
         this.currentGeneration = 0;
+        this.maxRow=row;
+        this.maxColumn=column;
 
         board = HashBasedTable.create(row+10,column+10);
         this.maxGeneration = maxGeneration;
@@ -83,5 +87,21 @@ public final class GameOfLife {
 
     public Cell getCell(int x, int y) {
         return board.get(x,y);
+    }
+
+    public String print() {
+
+        StringBuilder sb = new StringBuilder();
+
+       for(int y = 0; y < maxRow;y++){
+
+           for(int x=0;x<maxColumn;x++){
+               sb.append("[").append(board.get(x,y).getValue()).append("]");
+           }
+
+           sb.append("\n");
+       }
+
+        return sb.toString().trim();
     }
 }
