@@ -140,23 +140,4 @@ public class TicTacToeSpec {
         ticTacToe.play(1, 2);
     }
 
-    @Test
-    public void test()
-    {
-        //mock creation
-        List mockedList = mock(List.class);
-
-        //using mock object
-        mockedList.add("one");
-        mockedList.clear();
-
-        //verification
-        verify(mockedList).add("one");
-        verify(mockedList).clear();
-
-    }
-
-
-
-
 }
